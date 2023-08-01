@@ -1,3 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690839236
-icon.svg::CompressedTexture2D::5513308401816382987::1690839233::1690839238::1::::<><>::
+::res://::1690892953
+README.md::TextFile::-1::1690839315::0::1::::<><>::
+::res://addons/::1690843535
+::res://addons/godogram/::1690892911
+dock.gd::GDScript::-1::1690892813::0::1::::<>Control<>::
+dock.tscn::PackedScene::9182845054190346142::1690890984::0::1::::<><>::res://addons/godogram/dock.gd<>uid://dkr2gt6cd4q4w::::res://addons/godogram/icon.png
+godogram.gd::GDScript::-1::1690892910::0::1::::GodoGram<>Node<>res://addons/godogram/icon.png::
+icon.png::CompressedTexture2D::7897896028775395912::1690839548::1690839661::1::::<><>::
+plugin.cfg::TextFile::-1::1690840212::0::1::::<><>::
+plugin.gd::GDScript::-1::1690845076::0::1::::<>EditorPlugin<>res://addons/godogram/icon.png::

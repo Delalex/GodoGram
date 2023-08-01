@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://d33id7tpvnthm"]
+
+[ext_resource type="Script" path="res://addons/godogram/dock.gd" id="1_xx5j7"]
+[ext_resource type="Texture2D" uid="uid://dkr2gt6cd4q4w" path="res://addons/godogram/icon.png" id="2_wrol0"]
+
+[node name="GodoGram" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xx5j7")
+
+[node name="list" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sep1" type="HSeparator" parent="list"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="icon" type="TextureRect" parent="list"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("2_wrol0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="title" type="Label" parent="list"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "GodoGram API Playground"
+horizontal_alignment = 1
+
+[node name="subtitle" type="Label" parent="list"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Made by Delalex"
+horizontal_alignment = 1
+
+[node name="sep2" type="HSeparator" parent="list"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="bot_token" type="LineEdit" parent="list"]
+layout_mode = 2
+placeholder_text = "Enter BOT TOKEN"
+
+[node name="chat_id" type="LineEdit" parent="list"]
+layout_mode = 2
+placeholder_text = "Enter CHAT ID"
+
+[node name="ping_test" type="Button" parent="list"]
+layout_mode = 2
+focus_mode = 0
+text = "Ping"
+metadata/_edit_use_anchors_ = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

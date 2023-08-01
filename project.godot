@@ -10,9 +10,17 @@ config_version=5
 
 [application]
 
-config/name="TelegramNode"
+config/name="GodoGram"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://addons/godogram/icon.png"
+
+[autoload]
+
+GodoGramAPI="*res://addons/godogram/godogram.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godogram/plugin.cfg")
 
 [rendering]
 
